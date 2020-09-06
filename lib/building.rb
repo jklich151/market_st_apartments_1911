@@ -9,11 +9,16 @@ class Building
     @units << unit
   end
 
+  # def average_rent
+  #   # average = []
+  #   @units.each do |unit|
+  #   unit.monthly_rent.sum
+  #     sum / 2
+  #   end
+  # end
+
   def average_rent
-    average = []
-    @units.each do |unit|
-      unit.monthly_rent.sum
-      sum / 2
-    end
+    rents = @units.map {|unit| unit.monthly_rent}
+    (rents.sum.to_f / x.length.to_f)
   end
 end
